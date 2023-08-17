@@ -28,3 +28,19 @@ function calculateRectangleArea(){
     const rectangleAreaSpan = document.getElementById('rectangle-area');
     rectangleAreaSpan.innerText = area;
 }
+
+// reusable function  for reduce duplicate code
+function colculateParallelogramArea(){
+    const base = getInputValue('parallelogram-base');
+    const height = getInputValue('parallelogram-height');
+    const area = base * height;
+    const parallelogramAreaSpan = document.getElementById('parallelogram-area');
+    parallelogramAreaSpan.innerText = area;
+}
+//reusable function for get input field value in number
+function getInputValue(fieldld){
+    const inputField = document.getElementById(fieldld)
+    const inputFieldValueText = inputField.value;
+    const value = parseFloat(inputFieldValueText);
+    return value;
+}
